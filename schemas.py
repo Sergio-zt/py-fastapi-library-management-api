@@ -2,10 +2,12 @@ from pydentic import BaseModel
 
 from typing import List, Optional
 
+from datetime import date
 
 class BookBase(BaseModel):
     title: str
     summary: Optional[str] = None
+    publication_date: date
 
 class BookCreate(BookBase):
     pass
