@@ -76,7 +76,7 @@ def create_book_for_author(
         )
     return crud.create_book_for_author(db=db, book=book, author_id=author_id)
 
-@app.get("/books/", response_model=List[schemas.BookResponse])
+@app.get("/books/", response_model=List[schemas.BookList])
 def read_books(
     skip: int = 0, 
     limit: int = 10, 
