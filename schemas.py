@@ -5,7 +5,10 @@ from typing import List, Optional
 
 class BookBase(BaseModel):
     title: str
-    description: Optional[str] = None
+    summary: Optional[str] = None
+
+class BookCreate(BookBase):
+    pass
 
 class BookList(BookBase):
     id: int
